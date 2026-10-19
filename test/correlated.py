@@ -69,15 +69,18 @@ plot(ClobsAB,label='observed ClAB')
 loglog()
 
 legend()
+savefig("test_cl_AB_input_vs_lognormal.png")
 
 # Because the mean of A is small, the field is notably non-Gaussian.
 figure()
 subplot(211)
 hist(mA,200,label="A")
 legend()
+savefig("test_hist_A.png")
 
 # Field B is fairly Gaussian.  You can make zero-mean gaussian fields by setting the mean high, then subtracting it away.
 subplot(212)
 hist(mB,200,label="B")
 legend()
-show()
+show()     
+savefig("test_hist_B.png") 

@@ -1,4 +1,48 @@
-build/*
+# ------------------------------------------------------------------------------
+# Data & Compiled Binary Files
+# ------------------------------------------------------------------------------
+*.pkl
+*.pickle
+*.h5
+*.pt
+*.npy
+*.csv
+*.fits
+*.png
+*.out
+*.pid
+*.log
+*.so
+*.o
+*.a
 *~
-*.pyc
-*__pycache__*
+
+# ------------------------------------------------------------------------------
+# Directories to Explicitly Ignore (At Any Depth)
+# ------------------------------------------------------------------------------
+build/
+*.egg-info/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ------------------------------------------------------------------------------
+# Script Preservation Rules
+# ------------------------------------------------------------------------------
+# Allow Git to traverse into all subdirectories EXCEPT build and egg-info
+!*/
+
+# Re-enforce blocking build and egg-info contents
+build/**
+*.egg-info/**
+
+# Explicitly ensure all Python scripts, notebooks, YAMLs, and .gitignore are tracked
+!*.py
+!*.ipynb
+!*.yml
+!*.yaml
+!*.c
+!*.h
+!.gitignore
